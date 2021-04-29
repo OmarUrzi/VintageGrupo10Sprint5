@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="logo"><span class="celeste">Vin</span>tage</li>
+                    <li class="btn"><span class="fas fa-bars"></span></li>
+                    <div class="items">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#buscado">Productos</a></li>
+                        <li><a href="/registro">Registrate</a></li>
+                        <li><a href="/inicio-sesion">Ingresar</a></li>
+                        <li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                    </div>
+                    <form action="procesar.php" method="POST">
+                        <li class="search-icon">
+                            <input type="search" placeholder="Search">
+                            <label>
+              <button class="icon"><span class="fas fa-search"></span></button>
+            </label>
+                        </li>
+                    </form>
+                </ul>
+                <script>
+                    $('nav ul li.btn span').click(function() {
+                        $('nav ul div.items').toggleClass("show");
+                        $('nav ul li.btn span').toggleClass("show");
+                    });
+                </script>
+            </nav>
+        </header>
+        <main>
+            <section class="contenedor-general">
+                <div class="contenedor-slider">
+                    <p class="ruta"> Home / VESTIDOS CORTOS / <span>Vestido Travesía</span> </p>
+                    <div class="slider">
+                        <img src="/img/grilla1.1.jpg" alt="">
+                        <div class="contenedor-descripcion">
+                            <div class="titulo">
+                                <h1>CHI21632 Vestido TRAVESÍA</h1>
+                                <i class="fab fa-cc-visa"></i>
+                                <p>6 cuotas sin interés <span>de $ 7.500</span></p>
+                                <p><a href="#">Ver más detalle</a></p>
+                                <hr>
+                            </div>
+                            <div class="colores">
+                                <h2>Descripcion</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, voluptatem ex natus dolore, nisi molestiae omnis eligendi libero delectus vero officiis, laborum doloremque fugit accusamus adipisci necessitatibus exercitationem
+                                    asperiores! Molestias.</p>
+                                <hr>
+                            </div>
+                            <div class="opciones">
+                                <label>Colores</label>
+                                <select name="" id="AMARILLO">
+                <option value="">VERDE RETRO</option>
+                <option value="L">ROJO MODA</option>
+                <option value="">AZUL MARINO</option>
+                <option value="">NEGRO</option>
+              </select>
+                                <label>Talle</label>
+                                <select name="" id="AMARILLO">
+                <option value="">U</option>
+                <option value="L">L</option>
+                <option value="">A</option>
+                <option value="">N</option>
+              </select>
+                            </div>
+                            <form action="/carrito" method="GET">
+                                <div class="comrpar">
+                                    <div class="cantidad">
+                                        <p class="cantidad-texto">Cantidad: <input type="number" name="contador"></p>
+                                    </div>
+                                    <a href="/carrito"><input type="submit" value="Comprar" class="comprar"></a>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="portafolio">
+                <h3>Recomendado para vos</h3>
+                <div class="portafolio-container">
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado1.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$2.580</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado2.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$3.650</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado3.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$5.360</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+
+                    <div class="footer-section about">
+                        <h5 class="logo-text"><span>Vin</span>tage</h5>
+                        <p>
+                            Vintage es un E-comerce hecho para un propósito el de probarnos a nosotros, que podemos y sabemos programar, y hacemos un llamado para que nos puedan ver.
+                        </p>
+                        <div class="contact">
+                            <span><i class="fas fa-phone"></i> &nbsp; +51 11-3456-354</span>
+                            <span><i class="fas fa-envelope"></i> &nbsp; info@vintage.com</span>
+                        </div>
+                        <div class="socials">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section links">
+                        <h2>Enlaces Rápidos</h2>
+                        <br>
+                        <ul>
+                            <a href="#">
+                                <li>Eventos</li>
+                            </a>
+                            <a href="#">
+                                <li>Colaboradores</li>
+                            </a>
+                            <a href="#">
+                                <li>Devoluciones</li>
+                            </a>
+                            <a href="#">
+                                <li>Forma de pago</li>
+                            </a>
+                            <a href="#">
+                                <li>Términos y Condiciones</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section contact-form">
+                        <h2>Contactános</h2>
+                        <br>
+                        <form action="#" method="GET">
+                            <input type="email" name="email" class="text-input contact-input" placeholder="Tu Direccion de E-mail...">
+                            <textarea rows="4" name="message" class="text-input contact-input" placeholder="Tu Mensaje..."></textarea>
+                            <button type="submit" class="btn-footer btn-big contact-btn">
+              <i class="fas fa-envelope"></i>
+              Enviar
+            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    &copy; Vintage.com | Derechos Reservados
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
