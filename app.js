@@ -11,7 +11,7 @@ const productRouter = require('./routes/productRouter');
 const registerRouter = require('./routes/registerRouter');
 const inicioSesionRouter = require('./routes/inicioSesionRouter');
 const carritoRouter = require('./routes/carritoRouter');
-const userController = require('./controller/userController');
+const userRouter = require('./routes/userRouter');
 
 app.set('view engine', 'ejs')
 
@@ -24,4 +24,4 @@ app.use('/productos', productRouter);
 app.use('/registro', registerRouter);
 app.use('/inicio-sesion', inicioSesionRouter);
 app.use('/carrito', carritoRouter);
-//app.use('/users', userController);
+app.use('/users', userRouter);

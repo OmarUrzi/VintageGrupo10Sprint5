@@ -4,7 +4,11 @@ const router = express.Router();
 
 const userController = require('../controller/userController');
 
-router.get('/', userController.show)
+router.get('/listar', userController.show)
+
+router.get('/admintable', userController.table)
+
+router.get('/adminlistar', userController.listar)
 
 
 module.exports = router
