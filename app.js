@@ -3,6 +3,7 @@ const app = express()
 const path = require('path');
 const port = 3000
 const puerto = process.env.PORT
+const multer = require('multer')
 
 app.use(express.static('public'));
 
