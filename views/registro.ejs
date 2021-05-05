@@ -20,7 +20,7 @@
                         <div class="chat-box">
                             <div class="desc-text">
                                 Por favor este chat es para uso comercial, no incurra en cualquier tipo de violencia</div>
-                            <form action="#" method="GET">
+                            <form action="#" method="GET" enctype="multipart/form-data">
                                 <div class="field">
                                     <input type="text" placeholder="Nombre" required>
                                 </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <section class="login">
-                        <form class="formulario">
+                        <form class="formulario" action="#" method="POST" enctype="multipart/form-data">
                             <h1>Registrate</h1>
                             <div class="contenedor">
 
@@ -56,6 +56,12 @@
                                 <div class="input-contenedor">
                                     <i class="fas fa-key icon"></i>
                                     <input type="password" placeholder="Contraseña">
+
+                                </div>
+                                <label>Imagen de Perfil</label>
+                                <div class="input-contenedor">
+                                    <i class="fas fa-user"></i>
+                                    <input type="file" name="imagenUsuario" > 
 
                                 </div>
                                 <input type="submit" value="Registrate" class="button">

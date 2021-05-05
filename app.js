@@ -9,12 +9,14 @@ app.use(express.static('public'));
 
 const homeRouter = require('./routes/homeRouter');
 const productRouter = require('./routes/productRouter');
-const registerRouter = require('./routes/registerRouter');
-const inicioSesionRouter = require('./routes/inicioSesionRouter');
 const carritoRouter = require('./routes/carritoRouter');
 const userRouter = require('./routes/userRouter');
 
+
 app.set('view engine', 'ejs')
+
+app.use(express.urlencoded({ extended: false }));
+
 
 app.listen(puerto || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
@@ -22,7 +24,5 @@ app.listen(puerto || 3000, function() {
 
 app.use('/', homeRouter);
 app.use('/productos', productRouter);
-app.use('/registro', registerRouter);
-app.use('/inicio-sesion', inicioSesionRouter);
 app.use('/carrito', carritoRouter);
 app.use('/users', userRouter);
