@@ -8,44 +8,40 @@
         <%- include('partials/header') %>
 
         <main>
-            <h2>Alta de Producto</h2>
-            <section>
-                    <form action="#" method="POST" enctype="multipart/form-data" >
-                        <div>
+            <section class="conteiner-formulario">
+                <h2 class="altaProducto">Alta de Producto</h2>
+                    <form class="container-form" action="#" method="POST" enctype="multipart/form-data" >
+                        <div class="separador">
                             <label for="name">Nombre</label>
-                            <div>
+                            <div class="container-input">
                                 <input type="text" name="name">
                             </div>
                          
                         </div>
 
-                        <div>
+                        <div class="separador">
                             <label for="image">Imagen</label>
-                            <div>
+                            <div class="container-input">
                                 <input type="file" name="image">
                             </div>
                         </div>
 
-                        <div>
+                        <div class="separador">
                             <label for="price">Precio</label>
-                            <div>
+                            <div class="container-input">
                                 <input type="text" name="price">
                             </div>
                         </div>
 
-                        <div>
+                        <div class="separador">
                             <label for="descuento">descuento</label>
-                            <div>
+                            <div class="container-input">
                                 <input type="text" name="descuento">
                             </div>
                         </div>
 
-                     
-
-                      
-
-                        <div>
-                            <div>
+                        <div class="separador">
+                            <div class="container-input">
                                 <button type="submit">Crear producto</button>
                             </div>
                         </div>

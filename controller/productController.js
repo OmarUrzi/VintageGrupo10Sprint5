@@ -1,9 +1,8 @@
 let productos = require('../data/datosProductos')
 
 let productController = {
-
-    index: (req, res) => {
-        res.render('adminProducts', { productos })
+    show: (req, res) => {
+        res.render('userProducts', { productos })
     },
     edit: (req, res) => {
         res.render('edit', { productos })

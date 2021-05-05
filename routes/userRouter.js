@@ -4,7 +4,6 @@ const router = express.Router();
 
 const userController = require('../controller/userController');
 
-router.get('/listar', userController.show)
 
 router.get('/admintable', userController.table)
 

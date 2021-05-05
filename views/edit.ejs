@@ -8,40 +8,42 @@
         <%- include('partials/header') %>
 
             <main>
+                <section class="edicion">
                 <h2>Edición de Producto</h2>
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <div>
+                    <div class="separador">
                         <label>Nombre</label>
-                        <div>
+                        <div class="container-input">
                             <input type="text" name="name" value="<%= productos.name %>">
                         </div>
                     </div>
-                    <div>
+                    <div class="separador">
                         <label for="image">Imagen</label>
-                        <div>
+                        <div class="container-input">
                             <input type="file" name="image">
                             <input type="hidden" name="oldImage" value="<%= productos.image %>">
                         </div>
                     </div>
-                    <div>
+                    <div class="separador">
                         <label for="price">Precio</label>
-                        <div>
+                        <div class="container-input">
                             <input type="text" name="price" value="<%= productos.price %>">
                         </div>
                     </div>
 
-                    <div>
+                    <div class="separador">
                         <label for="descuento">descuento</label>
-                        <div>
+                        <div class="container-input">
                             <input type="text" name="descuento" value="<%= productos.descuento  %>">
                         </div>
                     </div>
-                    <div>
+                    <div class="separador">
                         <div>
                             <button type="submit">Editar producto</button>
                         </div>
                     </div>
                 </form>
+            </section>
             </main>
 
 

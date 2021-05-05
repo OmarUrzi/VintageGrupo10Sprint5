@@ -1050,27 +1050,98 @@ main .container-admin h1{
 
 
 
+/**************create produtcs*****************/
+
+.altaProducto{
+  color: #777;
+  font-size: 2rem;
+  padding: 50px 0;
+  text-align: center;
+}
+.container-form{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.conteiner-formulario .container-form label{
+  color:#000;
+}
+.conteiner-formulario{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
+/*************listado productos admin******************/
+
+
+.container-products{
+  margin-left: 150px;
+
+}
+.container-products h2{
+  color: #777;
+  font-size: 2rem;
+  padding: 30px 150px;
+  text-align: center;
+}
+.container-buttom{
+  padding: 0;
+}
+.container-buttom a{
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #222222;
+  cursor: pointer;
+}
+.products-items{
+  padding: 50px 0;
+}
+.products-items a{
+  color: #777;
+  padding: 0 20px;
+}
+.products-cards{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-top: 50px;
+
+}
 
 
 
+/**************formulario de edicion********************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.edicion h2{
+  font-size: 2rem;
+  color: #777;
+  padding: 20px 0;
+  text-align: center;
+}
+.edicion form{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.separador{
+  padding: 20px;
+}
+.separador label{
+  color: #777;
+}
+.container-input input{
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid rgb(179, 179, 179);
+} 
+input[type="file"]{
+  color: #777;
+}
 
 
 
@@ -1154,7 +1225,7 @@ main .container-admin h1{
     width: 90%;
   }
 }
-  @media screen and (max-width: 405px) {
+  @media screen and (max-width: 705px) {
     nav ul li.btn{
         display: block;
         z-index: 10000;
@@ -1282,6 +1353,9 @@ main .container-admin h1{
         }
         main .contenedor-carrito .contenedor-cinco input{
           margin-left: -80%;
+        }
+        .items .fa-shopping-cart{
+          display: none;
         }
         
         
