@@ -4,35 +4,7 @@
 <%- include('partials/head')%>
 
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li class="logo"><span class="celeste">Vin</span>tage</li>
-                    <li class="btn"><span class="fas fa-bars"></span></li>
-                    <div class="items">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#buscado">Productos</a></li>
-                        <li><a href="/registro">Registrate</a></li>
-                        <li><a href="/inicio-sesion">Ingresar</a></li>
-                        <li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
-                    </div>
-                    <form action="procesar.php" method="POST" enctype="multipart/form-data">
-                        <li class="search-icon">
-                            <input type="search" placeholder="Search">
-                            <label>
-                            <button class="icon"><span class="fas fa-search"></span></button>
-                        </label>
-                        </li>
-                    </form>
-                </ul>
-                <script>
-                    $('nav ul li.btn span').click(function() {
-                        $('nav ul div.items').toggleClass("show");
-                        $('nav ul li.btn span').toggleClass("show");
-                    });
-                </script>
-            </nav>
-        </header>
+        <%- include('partials/header')%>
         <main class="login2">
             <section class="inicio-secion2">
                 <input type="checkbox" id="click">

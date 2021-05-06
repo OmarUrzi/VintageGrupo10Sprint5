@@ -1063,6 +1063,9 @@ main .container-admin h1{
   text-align: center;
   margin: 0 auto;
 }
+.container-form a{
+  color: #777;
+}
 .conteiner-formulario .container-form label{
   color:#000;
 }
@@ -1070,6 +1073,7 @@ main .container-admin h1{
   display: flex;
   flex-direction: column;
 }
+
 
 
 
