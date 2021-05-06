@@ -3,7 +3,8 @@ const app = express()
 const path = require('path');
 const port = 3000
 const puerto = process.env.PORT
-const multer = require('multer')
+
+const methodOverride = require('method-override');
 
 app.use(express.static('public'));
 
@@ -16,6 +17,7 @@ const userRouter = require('./routes/userRouter');
 app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 
 app.listen(puerto || 3000, function() {
