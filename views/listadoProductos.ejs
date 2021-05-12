@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head')%>
+  <body>
+    <%- include('partials/header')%>
+    <main>
+      <h1 class="altaProducto">LISTADO DE PRODUCTOS</h1>
+      <div class="container-listado">
+        <div class="conte">
+          <div class="card stromtroper">
+            <a href=""><img src="/img/product1.jpg"/></a>
+          </div>
+          <div class="informacion">
+            <h1>SHORT FLORINDA</h1>
+        </div>
+        <div class="precio">
+            <div class="box-precio">
+                <p>Precio : S/55.00</p>
+                <p>Descuento: 50%</p>
+            </div>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <div class="Configuracion">
+              <a href="#" class="button is-success">Editar</a>
+              <form class="" action="" method="POST">
+                <button type="submit" class="">Borrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="conte">
+          <div class="card iron-man">
+        <a href="#"><img src="/img/product2.jpg"/></a>
+          </div>
+          <div class="informacion">
+            <h1>SHORT LOURDES</h1>
+          </div>
+          <div class="precio">
+            <div class="box-precio">
+                <p>Precio : S/55.00</p>
+                <p>Descuento: 50%</p>
+            </div>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <div class="Configuracion">
+              <a href="#" class="button is-success">Editar</a>
+              <form class="" action="/productos/create" method="POST">
+                <button type="submit" class="">Borrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="conte">
+          <div class="card spider-man">
+        <a href="#"><img src="/img/product3.jpg"/></a>
+          </div>
+          <div class="informacion">
+            <h1>SHORT LUCIA</h1>
+          </div>
+          <div class="precio">
+            <div class="box-precio">
+                <p>Precio : S/55.00</p>
+                <p>Descuento: 50%</p>
+            </div>
+            <i class="fas fa-shopping-bag"></i>
+            <div class="Configuracion">
+              <a href="#" class="button is-success">Editar</a>
+              <form class="" action="" method="POST">
+                <button type="submit" class="">Borrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('partials/footer')%>
+  </body>
+</html>

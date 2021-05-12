@@ -15,9 +15,26 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storge: storage});
 
-router.get('/admintable', userController.table)
-router.get('/adminlistar', userController.listar)
 router.get('/registro', upload.single('imagenUsuario'),userController.register);
 router.get('/inicio-sesion', userController.login);
 
 module.exports = router
+
+
+
+
+
+
+
+
+
+
+
+
+//router.get('/admintable', userController.table)
+//router.get('/adminlistar', userController.listar)
+
+
+
+
+

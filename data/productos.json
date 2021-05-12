@@ -52,5 +52,27 @@
       "name": "remeras",
       "price": "650",
       "image": "grilla9.jpg"
+    },
+    {
+    
+      "id": "10",
+      "name": "Short Florinda",
+      "price": "55",
+      "image": "product1.jpg"
+    },
+    {
+    
+      "id": "11",
+      "name": "Short Lourdes",
+      "price": "55",
+      "image": "product2.jpg"
+    },
+    {
+    
+      "id": "12",
+      "name": "Short Lucia",
+      "price": "55",
+      "image": "product3.jpg"
     }
+
   ]

@@ -3,7 +3,8 @@ let productos = require('../data/datosProductos')
 let homeController = {
 
     leerTodos: (req, res) => {
-        res.render('index', { 'productos': productos })
+        const products = productModel.all();
+        res.render('index', {productos});
     }
 
 }

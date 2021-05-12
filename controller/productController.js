@@ -1,20 +1,16 @@
-let productos = require('../data/datosProductos')
+let productos = require('../model/jsonDataBase');
+
+let productModel = productos('productos');
 
 let productController = {
-    show: (req, res) => {
-        const product = productModel.find(req.params.id);
-        if(product){
-            res.render('userProducts', { productos })
-        }else{
-            res.render('error404');
-        }
+    listar:(req,res) => {
+        const listado = productModel.all();
+        res.render('listadoProductos', {listado})
     },
     edit: (req, res) => {
         let product = productModel.find(req.params.id);
         if(product){
             res.render('edit', { productos })
-        }else{
-            res.render('error404');
         }
     },
     detail: (req, res) => {
@@ -24,13 +20,10 @@ let productController = {
         res.render('create')
     },
     store: (req, res)=>{
-        if(req.file){
             const product = req.body;
             product.image = req.file ? req.file.filename : '';
             productModel.create(product);
-        }else{
-            res.redirect('create')
-        }
+            res.redirect('/')
     },
     update: (req, res) =>{
         let  product = req.body;

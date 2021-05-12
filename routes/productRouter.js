@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage})
 
-router.get('/listar', productController.show)
+router.get('/listar', productController.listar);
 
 router.get('/edit', productController.edit)
 
