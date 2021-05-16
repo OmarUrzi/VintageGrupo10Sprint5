@@ -3,36 +3,9 @@
 
 <%- include('partials/head')%>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li class="logo"><span class="celeste">Vin</span>tage</li>
-                    <li class="btn"><span class="fas fa-bars"></span></li>
-                    <div class="items">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#buscado">Productos</a></li>
-                        <li><a href="/registro">Registrate</a></li>
-                        <li><a href="/inicio-sesion">Ingresar</a></li>
-                        <li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
-                    </div>
-                    <form action="procesar.php" method="POST">
-                        <li class="search-icon">
-                            <input type="search" placeholder="Search">
-                            <label>
-              <button class="icon"><span class="fas fa-search"></span></button>
-            </label>
-                        </li>
-                    </form>
-                </ul>
-                <script>
-                    $('nav ul li.btn span').click(function() {
-                        $('nav ul div.items').toggleClass("show");
-                        $('nav ul li.btn span').toggleClass("show");
-                    });
-                </script>
-            </nav>
-        </header>
+<body>
+    
+    <%- include('partials/header')%>
         <main>
             <section class="contenedor-general">
                 <div class="contenedor-slider">
@@ -74,13 +47,17 @@
                                     <div class="cantidad">
                                         <p class="cantidad-texto">Cantidad: <input type="number" name="contador"></p>
                                     </div>
-                                    <a href="/carrito"><input type="submit" value="Comprar" class="comprar"></a>
+                                    <button type="submit" value="Comprar" class="comprar">Comprar</button>
                                 </div>
                             </form>
-                            <a href="#" class="button-edit">Editar</a>
-                            <form class="form" action="#" method="POST">
-                                <a href="#">Borrar</a>
-                            </form>
+                            <div class="Configuracion">
+                                <form action="#" method="GET">
+                                    <button type="submit">Borrar</button>
+                                    <a href="/productos/<%= productos.id %>/edit">Editar</a>
+                                </form>
+                            </div>
+
+                            
                     </div>
                 </div>
                 </div>
@@ -120,94 +97,10 @@
                     </section>
                 </div>
             </section>
-
-
-
-
-
-
-
-
-
         </main>
-        <footer>
-            <div class="footer">
-                <div class="footer-content">
 
-                    <div class="footer-section about">
-                        <h5 class="logo-text"><span>Vin</span>tage</h5>
-                        <p>
-                            Vintage es un E-comerce hecho para un propósito el de probarnos a nosotros, que podemos y sabemos programar, y hacemos un llamado para que nos puedan ver.
-                        </p>
-                        <div class="contact">
-                            <span><i class="fas fa-phone"></i> &nbsp; +51 11-3456-354</span>
-                            <span><i class="fas fa-envelope"></i> &nbsp; info@vintage.com</span>
-                        </div>
-                        <div class="socials">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="footer-section links">
-                        <h2>Enlaces Rápidos</h2>
-                        <br>
-                        <ul>
-                            <a href="#">
-                                <li>Eventos</li>
-                            </a>
-                            <a href="#">
-                                <li>Colaboradores</li>
-                            </a>
-                            <a href="#">
-                                <li>Devoluciones</li>
-                            </a>
-                            <a href="#">
-                                <li>Forma de pago</li>
-                            </a>
-                            <a href="#">
-                                <li>Términos y Condiciones</li>
-                            </a>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section contact-form">
-                        <h2>Contactános</h2>
-                        <br>
-                        <form action="#" method="GET">
-                            <input type="email" name="email" class="text-input contact-input" placeholder="Tu Direccion de E-mail...">
-                            <textarea rows="4" name="message" class="text-input contact-input" placeholder="Tu Mensaje..."></textarea>
-                            <button type="submit" class="btn-footer btn-big contact-btn">
-              <i class="fas fa-envelope"></i>
-              Enviar
-            </button>
-                        </form>
-                    </div>
-
-                </div>
-
-                <div class="footer-bottom">
-                    &copy; Vintage.com | Derechos Reservados
-                </div>
-            </div>
-        </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+        <%- include('partials/footer')%>
 
     </body>
 

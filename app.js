@@ -3,7 +3,7 @@ const app = express()
 const path = require('path');
 const port = 3000
 const puerto = process.env.PORT
-
+const logMiddleware = require('./middlewares/logMiddleware')
 const methodOverride = require('method-override');
 
 app.use(express.static('public'));
@@ -18,6 +18,7 @@ app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(logMiddleware)
 
 
 app.listen(puerto || 3000, function() {

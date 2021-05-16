@@ -8,11 +8,11 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: path.resolve(__dirname, '../public/img'),
-    filename: (req,  res, cb) =>{cb(null, 'img-' + Date.now() + path.extname(file.oroginalname))}
+    filename: (req, file, cb) =>{cb(null, 'img-' + Date.now() + path.extname(file.originalname))}
 });
 const upload = multer({storage})
 
-router.get('/listar', productController.listar);
+router.get('/listar', productController.listar)
 
 router.get('/edit', productController.edit)
 

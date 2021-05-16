@@ -1,29 +1,30 @@
 let productos = require('../model/jsonDataBase');
+let products = require('../data/productos.json')
 
 let productModel = productos('productos');
 
 let productController = {
-    listar:(req,res) => {
-        const listado = productModel.all();
-        res.render('listadoProductos', {listado})
+    listar: (req, res) =>{
+        let productos = productModel.all();
+        res.render('listadoProductos', {productos})
     },
     edit: (req, res) => {
         let product = productModel.find(req.params.id);
         if(product){
             res.render('edit', { productos })
-        }
+        }   
     },
     detail: (req, res) => {
-        res.render('detail-product', { productos })
+        res.render('detail-product', { products })
     },
     create: (req, res) => {
         res.render('create')
     },
     store: (req, res)=>{
             const product = req.body;
-            product.image = req.file ? req.file.filename : '';
+            products.image = req.file ? req.file.filename : '';
             productModel.create(product);
-            res.redirect('/')
+            res.redirect('/productos/listar')
     },
     update: (req, res) =>{
         let  product = req.body;
@@ -37,8 +38,8 @@ let productController = {
         res.redirect('/')
     },
     destroy: (req, res) => {
-        productModel.delete(req.params.id);
-        res.redirect('/')
+        productModel.delete(req.params.id); 
+        res.redirect('/productos/listar')
     }
     
 }

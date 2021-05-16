@@ -1,78 +1,104 @@
 [
-    {
-      "id": "1",
-      "name": "remera perla",
-      "price": "500",
-      "image": "grilla1.jpg"
-    },
-    {
-      "id": "2",
-      "name": "kimono",
-      "price": "600",
-      "image": "grilla2.jpg"
-    },
-    {
-      "id": "3",
-      "name": "vestido",
-      "price": "800",
-      "image": "grilla3.jpg"
-    },
-    {
-      "id": "4",
-      "name": "campera",
-      "price": "1600",
-      "image": "grilla4.jpg"
-    },
-    {
-      "id": "5",
-      "name": "enterito",
-      "price": "850",
-      "image": "grilla5.jpg"
-    },
-    {
-      "id": "6",
-      "name": "falda",
-      "price": "750",
-      "image": "grilla6.jpg"
-    },
-    {
-      "id": "7",
-      "name": "vestido crushe",
-      "price": "2500",
-      "image": "grilla7.jpg"
-    },
-    {
-      "id": "8",
-      "name": "pantalones",
-      "price": "1500",
-      "image": "grilla8.jpg"
-    },
-    {
-      "id": "9",
-      "name": "remeras",
-      "price": "650",
-      "image": "grilla9.jpg"
-    },
-    {
-    
-      "id": "10",
-      "name": "Short Florinda",
-      "price": "55",
-      "image": "product1.jpg"
-    },
-    {
-    
-      "id": "11",
-      "name": "Short Lourdes",
-      "price": "55",
-      "image": "product2.jpg"
-    },
-    {
-    
-      "id": "12",
-      "name": "Short Lucia",
-      "price": "55",
-      "image": "product3.jpg"
-    }
-
-  ]
+ {
+  "id": "1",
+  "name": "remera perla",
+  "price": "500",
+  "image": "grilla1.jpg"
+ },
+ {
+  "id": "2",
+  "name": "kimono",
+  "price": "600",
+  "image": "grilla2.jpg"
+ },
+ {
+  "id": "3",
+  "name": "vestido",
+  "price": "800",
+  "image": "grilla3.jpg"
+ },
+ {
+  "id": "4",
+  "name": "campera",
+  "price": "1600",
+  "image": "grilla4.jpg"
+ },
+ {
+  "id": "5",
+  "name": "enterito",
+  "price": "850",
+  "image": "grilla5.jpg"
+ },
+ {
+  "id": "6",
+  "name": "falda",
+  "price": "750",
+  "image": "grilla6.jpg"
+ },
+ {
+  "id": "7",
+  "name": "vestido crushe",
+  "price": "2500",
+  "image": "grilla7.jpg"
+ },
+ {
+  "id": "8",
+  "name": "pantalones",
+  "price": "1500",
+  "image": "grilla8.jpg"
+ },
+ {
+  "id": "9",
+  "name": "remeras",
+  "price": "650",
+  "image": "grilla9.jpg"
+ },
+ {
+  "name": "VINTAGE",
+  "price": "",
+  "descuento": "",
+  "id": 10
+ },
+ {
+  "name": "VINTAGE",
+  "price": "",
+  "descuento": "",
+  "id": 11
+ },
+ {
+  "name": "VINTAGE",
+  "price": "",
+  "descuento": "",
+  "id": 12
+ },
+ {
+  "name": "",
+  "price": "",
+  "descuento": "",
+  "id": 13
+ },
+ {
+  "name": "",
+  "price": "",
+  "descuento": "",
+  "id": 14
+ },
+ {
+  "name": "",
+  "price": "",
+  "descuento": "",
+  "id": 15
+ },
+ {
+  "name": "VINTAGE",
+  "price": "555",
+  "descuento": "3",
+  "id": 16
+ },
+ {
+  "name": "brayann farfan",
+  "price": "",
+  "descuento": "",
+  "id": 17
+ }
+]
