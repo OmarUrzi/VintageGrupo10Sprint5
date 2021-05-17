@@ -1,10 +1,13 @@
-let productos = require('../data/datosProductos')
-
+let productos = require('../model/jsonDataBase');
+let products = require('../data/productos.json')
+let productModel = productos('productos');
 let homeController = {
 
-    leerTodos: (req, res) => {
-        res.render('index', {productos})
-    }
+    leerTodos: (req, res) =>{
+        let product = productModel.all();
+        console.log(product)
+        res.render('index', {product})
+    },
 
 }
 

@@ -11,7 +11,6 @@ let productController = {
     edit: (req, res) => {
         let product = productModel.find(req.params.id);
         if(product){
-<<<<<<< HEAD
             res.render('edit', { product })
         }   
     },
@@ -19,24 +18,13 @@ let productController = {
         let product = productModel.find(req.params.id)
         console.log(product)
         res.render('detail-product', { product })
-=======
-            res.render('edit', { productos })
-        }   
-    },
-    detail: (req, res) => {
-        res.render('detail-product', { products })
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
     },
     create: (req, res) => {
         res.render('create')
     },
     store: (req, res)=>{
             const product = req.body;
-<<<<<<< HEAD
             product.image = req.file ? req.file.filename : '';
-=======
-            products.image = req.file ? req.file.filename : '';
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
             productModel.create(product);
             res.redirect('/productos/listar')
     },
@@ -49,7 +37,7 @@ let productController = {
         }
         delete product.oldImage;
         productModel.update(product);
-        res.redirect('/')
+        res.redirect('/productos/listar')
     },
     destroy: (req, res) => {
         productModel.delete(req.params.id); 

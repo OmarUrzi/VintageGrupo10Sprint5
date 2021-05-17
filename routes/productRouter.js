@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
     destination: path.resolve(__dirname, '../public/img'),
     filename: (req, file, cb) =>{cb(null, 'img-' + Date.now() + path.extname(file.originalname))}
 });
-<<<<<<< HEAD
+
 
 const { body } = require('express-validator')
 
@@ -54,28 +54,15 @@ const validacionesEdit = [
 router.get('/listar', productController.listar)
 
 router.get('/edit/:id', productController.edit)
-=======
-const upload = multer({storage})
-
-router.get('/listar', productController.listar)
-
-router.get('/edit', productController.edit)
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
 
 router.get('/detail/:id', productController.detail)
 
 router.get('/create', upload.single('image'),productController.create)
 
-<<<<<<< HEAD
 router.post('/store', upload.single('image'),validaciones, productController.store);
 
 router.put('/:id', upload.single('image'), productController.update);
 
-=======
-router.post('/store', upload.single('image'), productController.store);
+router.delete('/:id', productController.destroy);
 
-router.put('/:id', upload.single('image'), productController.update);
-
-
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
 module.exports = router;

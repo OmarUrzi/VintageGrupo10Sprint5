@@ -11,17 +11,10 @@
                 <div class="contenedor-slider">
                     <p class="ruta"> Home / VESTIDOS CORTOS / <span>Vestido Travesía</span> </p>
                     <div class="slider">
-<<<<<<< HEAD
                         <img src="/img/<%= product.image %>" alt="" width="260">
                         <div class="contenedor-descripcion">
                             <div class="titulo">
                                 <h1><%= product.name %></h1>
-=======
-                        <img src="/img/grilla1.1.jpg" alt="">
-                        <div class="contenedor-descripcion">
-                            <div class="titulo">
-                                <h1>CHI21632 Vestido TRAVESÍA</h1>
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
                                 <i class="fab fa-cc-visa"></i>
                                 <p>6 cuotas sin interés <span>de $ 7.500</span></p>
                                 <p><a href="#">Ver más detalle</a></p>
@@ -58,19 +51,15 @@
                                 </div>
                             </form>
                             <div class="Configuracion">
-                                <form action="#" method="GET">
+                                <form action="/productos/<%=  product.id %>?_method=DELETE" method="POST">
                                     <button type="submit">Borrar</button>
-<<<<<<< HEAD
+                                </form>
+                            </div>          
+                            <div class="Configuracion">
+                                <form action="#" method="GET">
                                     <a href="/productos/edit/<%= product.id %>">Editar</a>
                                 </form>
-                            </div>                            
-=======
-                                    <a href="/productos/<%= productos.id %>/edit">Editar</a>
-                                </form>
-                            </div>
-
-                            
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
+                            </div>                       
                     </div>
                 </div>
                 </div>

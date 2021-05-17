@@ -1,5 +1,5 @@
 {
-  "name": "VintageGrupo10Sprint2.1",
+  "name": "asd",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -12,10 +12,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "express-validator": "^6.11.1",
-=======
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
     "method-override": "^3.0.0",
     "multer": "^1.4.2"
   },

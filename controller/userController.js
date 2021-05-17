@@ -1,4 +1,4 @@
-let productos = require('../data/datosProductos');
+let productos = require('../data/users.json');
 
 const userController = {
     register:(req,res) =>{

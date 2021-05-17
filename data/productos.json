@@ -1,116 +1,65 @@
 [
  {
-<<<<<<< HEAD
   "name": "remera perla",
   "price": "500",
-  "descuento": "3",
+  "descuento": "100",
   "id": "1",
-=======
-  "id": "1",
-  "name": "remera perla",
-  "price": "500",
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
   "image": "grilla1.jpg"
  },
  {
-  "id": "2",
   "name": "kimono",
   "price": "600",
+  "descuento": "15",
+  "id": "2",
   "image": "grilla2.jpg"
  },
  {
   "id": "3",
   "name": "vestido",
   "price": "800",
-  "image": "grilla3.jpg"
+  "image": "grilla3.jpg",
+  "descuento": "100"
  },
  {
   "id": "4",
   "name": "campera",
   "price": "1600",
-  "image": "grilla4.jpg"
+  "image": "grilla4.jpg",
+  "descuento": "100"
  },
  {
   "id": "5",
   "name": "enterito",
   "price": "850",
-  "image": "grilla5.jpg"
+  "image": "grilla5.jpg",
+  "descuento": "100"
  },
  {
   "id": "6",
   "name": "falda",
   "price": "750",
-  "image": "grilla6.jpg"
+  "image": "grilla6.jpg",
+  "descuento": "100"
  },
  {
   "id": "7",
   "name": "vestido crushe",
   "price": "2500",
-  "image": "grilla7.jpg"
+  "image": "grilla7.jpg",
+  "descuento": "100"
  },
  {
   "id": "8",
   "name": "pantalones",
   "price": "1500",
-  "image": "grilla8.jpg"
+  "image": "grilla8.jpg",
+  "descuento": "100"
  },
  {
   "id": "9",
   "name": "remeras",
   "price": "650",
-  "image": "grilla9.jpg"
-<<<<<<< HEAD
+  "image": "grilla9.jpg",
+  "descuento": "100"
  }
-
-=======
- },
- {
-  "name": "VINTAGE",
-  "price": "",
-  "descuento": "",
-  "id": 10
- },
- {
-  "name": "VINTAGE",
-  "price": "",
-  "descuento": "",
-  "id": 11
- },
- {
-  "name": "VINTAGE",
-  "price": "",
-  "descuento": "",
-  "id": 12
- },
- {
-  "name": "",
-  "price": "",
-  "descuento": "",
-  "id": 13
- },
- {
-  "name": "",
-  "price": "",
-  "descuento": "",
-  "id": 14
- },
- {
-  "name": "",
-  "price": "",
-  "descuento": "",
-  "id": 15
- },
- {
-  "name": "VINTAGE",
-  "price": "555",
-  "descuento": "3",
-  "id": 16
- },
- {
-  "name": "brayann farfan",
-  "price": "",
-  "descuento": "",
-  "id": 17
- }
->>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
 ]

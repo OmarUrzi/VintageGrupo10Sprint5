@@ -1,4 +1,4 @@
-let productos = require('../data/datosProductos')
+let productos = require('../data/productos.json')
 
 let carritoController = {
 
