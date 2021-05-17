@@ -29,7 +29,10 @@ const model = function (name){
             return rows.find(product => product.id == id);
         },
         create:function(row) {
+<<<<<<< HEAD
             console.log(row)
+=======
+>>>>>>> fd68e9c5fb581b92d341d655241ea4756cda83d8
             let rows = this.readFile();
             row.id = this.nextId();
             rows.push(row);
