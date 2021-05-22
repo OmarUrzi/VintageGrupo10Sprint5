@@ -1,22 +1,53 @@
 const express = require('express');
-
 const router = express.Router();
 const multer = require('multer');
 const userController = require('../controller/userController');
 const path = require('path');
+const auth = require('../middlewares/auth');
+
+const {body} = require('express-validator');
+
 const storage = multer.diskStorage({
-    destination: (req, res, cb) =>{
+    destination: (req, file, cb) =>{
         cb(null, path.join(__dirname, '../public/img/imageUser'))
     },
-    filename: (req, res, cb)=>{
-        const newFileName = 'usuario ' +  Date.now() + path.extname(file.originalname);
+    filename: (req, file, cb)=>{
+        const newFileName = 'usuario' +  Date.now() + path.extname(file.originalname);
         cb(null, newFileName)
     }
 });
-const upload = multer({storge: storage});
 
-router.get('/registro', upload.single('imagenUsuario'),userController.register);
+const upload = multer({storage});
+
+const validations = [
+    body('nombre').notEmpty().withMessage('El campo no puede estar vacio'),
+    body('email').isEmail().withMessage('Ingrese un email valido'),
+    body('clave').isLength({min: 8}).withMessage('Ingrese al menos 8 caracteres'),
+    body('imagenAvatar').custom((value, {req}) => {
+        let file = req.file
+        if ( !file) {
+           throw new Error('Debe agregar una foto');
+         }
+   
+        return true
+   
+       })
+]
+
+
+
+
+router.get('/registro',userController.register);
+
+router.post('/registro',upload.single('imagenAvatar'),validations,userController.registerPro);
+
 router.get('/inicio-sesion', userController.login);
+
+router.post('/inicio-sesion',userController.loginPro);
+
+router.get('/profile', auth,userController.profile);
+
+router.get('/logout', auth,userController.logout);
 
 module.exports = router
 

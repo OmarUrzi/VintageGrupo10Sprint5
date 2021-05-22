@@ -61,7 +61,7 @@ router.get('/create', upload.single('image'),productController.create)
 
 router.post('/store', upload.single('image'),validaciones, productController.store);
 
-router.put('/:id', upload.single('image'), productController.update);
+router.put('/:id', upload.single('image'), validacionesEdit,productController.update);
 
 router.delete('/:id', productController.destroy);
 

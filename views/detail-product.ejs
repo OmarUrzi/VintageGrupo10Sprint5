@@ -11,7 +11,7 @@
                 <div class="contenedor-slider">
                     <p class="ruta"> Home / VESTIDOS CORTOS / <span>Vestido Travesía</span> </p>
                     <div class="slider">
-                        <img src="/img/<%= product.image %>" alt="" width="260">
+                        <img src="/img/<%= product.image %>">
                         <div class="contenedor-descripcion">
                             <div class="titulo">
                                 <h1><%= product.name %></h1>
@@ -50,6 +50,7 @@
                                     <button type="submit" value="Comprar" class="comprar">Comprar</button>
                                 </div>
                             </form>
+                            <div class="container-config">
                             <div class="Configuracion">
                                 <form action="/productos/<%=  product.id %>?_method=DELETE" method="POST">
                                     <button type="submit">Borrar</button>
@@ -59,7 +60,8 @@
                                 <form action="#" method="GET">
                                     <a href="/productos/edit/<%= product.id %>">Editar</a>
                                 </form>
-                            </div>                       
+                            </div>     
+                            </div>                  
                     </div>
                 </div>
                 </div>

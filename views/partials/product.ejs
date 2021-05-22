@@ -7,7 +7,7 @@
   </div>
   <div class="precio">
     <div class="box-precio">
-        <p>Antes $<%= productos.price %></p>
+        <p id="antes">Antes $<%= productos.price %></p>
         <p>Ahora $<%= productos.price - productos.descuento %></p>
         <p>Descuento del <%= Math.round(productos.descuento * 100 / productos.price) %>%</p>
     </div>

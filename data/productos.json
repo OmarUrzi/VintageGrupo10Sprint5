@@ -1,65 +1,65 @@
 [
  {
-  "name": "remera perla",
+  "name": "REMERA PERLA",
   "price": "500",
   "descuento": "100",
   "id": "1",
   "image": "grilla1.jpg"
  },
  {
-  "name": "kimono",
+  "name": "KIMONO",
   "price": "600",
   "descuento": "15",
   "id": "2",
   "image": "grilla2.jpg"
  },
  {
-  "id": "3",
-  "name": "vestido",
+  "name": "VESTIDO",
   "price": "800",
-  "image": "grilla3.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "3",
+  "image": "grilla3.jpg"
  },
  {
-  "id": "4",
-  "name": "campera",
+  "name": "CAMPERA",
   "price": "1600",
-  "image": "grilla4.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "4",
+  "image": "grilla4.jpg"
  },
  {
-  "id": "5",
-  "name": "enterito",
+  "name": "ENTERITO",
   "price": "850",
-  "image": "grilla5.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "5",
+  "image": "grilla5.jpg"
  },
  {
-  "id": "6",
-  "name": "falda",
+  "name": "FALDA",
   "price": "750",
-  "image": "grilla6.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "6",
+  "image": "grilla6.jpg"
  },
  {
-  "id": "7",
-  "name": "vestido crushe",
+  "name": "VESTIDO CRUSHE",
   "price": "2500",
-  "image": "grilla7.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "7",
+  "image": "grilla7.jpg"
  },
  {
-  "id": "8",
-  "name": "pantalones",
+  "name": "PANTALONES",
   "price": "1500",
-  "image": "grilla8.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "8",
+  "image": "grilla8.jpg"
  },
  {
-  "id": "9",
-  "name": "remeras",
+  "name": "REMERAS",
   "price": "650",
-  "image": "grilla9.jpg",
-  "descuento": "100"
+  "descuento": "100",
+  "id": "9",
+  "image": "grilla9.jpg"
  }
 ]
