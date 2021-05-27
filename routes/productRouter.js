@@ -53,6 +53,8 @@ const validacionesEdit = [
 
 router.get('/listar', productController.listar)
 
+router.get('/listarborrado', productController.listarDelete)
+
 router.get('/edit/:id', productController.edit)
 
 router.get('/detail/:id', productController.detail)
@@ -62,6 +64,8 @@ router.get('/create', upload.single('image'),productController.create)
 router.post('/store', upload.single('image'),validaciones, productController.store);
 
 router.put('/:id', upload.single('image'), validacionesEdit,productController.update);
+
+router.put('/:id/recover', productController.recover);
 
 router.delete('/:id', productController.destroy);
 

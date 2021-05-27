@@ -6,6 +6,7 @@ const path = require('path');
 const auth = require('../middlewares/auth');
 
 const {body} = require('express-validator');
+const { nextId } = require('../model/users');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
@@ -26,7 +27,7 @@ const validations = [
     body('imagenAvatar').custom((value, {req}) => {
         let file = req.file
         if ( !file) {
-           throw new Error('Debe agregar una foto');
+           next();
          }
    
         return true

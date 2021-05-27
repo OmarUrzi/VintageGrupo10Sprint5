@@ -52,9 +52,17 @@
                             </form>
                             <div class="container-config">
                             <div class="Configuracion">
+                                <% if(product.status == 'live') { %>
+
                                 <form action="/productos/<%=  product.id %>?_method=DELETE" method="POST">
                                     <button type="submit">Borrar</button>
                                 </form>
+                                <%}else{ %>
+                                    <form action="/productos/<%=  product.id %>/recover?_method=PUT" method="POST">
+                                        <button type="submit">Recuperar</button>
+                                    </form>
+                                <%} %>
+                            
                             </div>          
                             <div class="Configuracion">
                                 <form action="#" method="GET">

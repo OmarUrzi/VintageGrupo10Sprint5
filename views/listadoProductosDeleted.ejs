@@ -6,14 +6,11 @@
     <main>
       <section>
         <form action="">
-        <div class="container-borrados">
-          <button id="borrados"><a href="/productos/listarborrado">Borrados</a></button>
-        </div>
       </form>
-      <h1 class="altaProducto">LISTADO DE PRODUCTOS</h1>
+      <h1 class="altaProducto">LISTADO DE PRODUCTOS ELIMINADOS</h1>
       <div class="container-listado">
         <% productos.forEach( productos => { %>
-          <%- include('partials/product', {productos}) %>
+          <%- include('partials/productDeleted', {productos}) %>
               <% }) %>
       </div>
     </section>

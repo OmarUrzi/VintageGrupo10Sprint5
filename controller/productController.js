@@ -5,8 +5,13 @@ let productModel = productos('productos');
 
 let productController = {
     listar: (req, res) =>{
-        let productos = productModel.all();
+        let productos = productModel.filter('live');
         res.render('listadoProductos', {productos})
+    },
+    listarDelete: (req, res) =>{
+        console.log(productModel);
+        let productos = productModel.filter('deleted');
+        res.render('listadoProductosDeleted', {productos})
     },
     edit: (req, res) => {
         let product = productModel.find(req.params.id);
@@ -41,6 +46,10 @@ let productController = {
     },
     destroy: (req, res) => {
         productModel.delete(req.params.id); 
+        res.redirect('/productos/listar')
+    },
+    recover: (req, res) => {
+        productModel.recover(req.params.id);
         res.redirect('/productos/listar')
     }
     

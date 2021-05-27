@@ -32,6 +32,7 @@ const model = function (name){
             console.log(row)
             let rows = this.readFile();
             row.id = this.nextId();
+            row.status = 'live';
             rows.push(row);
             this.writeFile(rows);
             return row.id;
@@ -51,13 +52,43 @@ const model = function (name){
         },
         delete: function(id) {
 
-            console.log('Elimino :' + id)
+            console.log('Elimino:' + id)
+            let rows = this.readFile();
+
+            let updatedRows = rows.map(oneRow => {
+                if (oneRow.id == id) {
+                    oneRow.status = 'deleted'
+                    return oneRow;
+                }
+
+                return oneRow;
+            });
+            this.writeFile(updatedRows);
+            return id;
+        },
+        filter: function(filtro){
+            console.log("entrando al filter");
             let rows = this.readFile();
             let updatedRows = rows.filter(row => {
-                return row.id != id;
-            });
+                return row.status == filtro;
+            })
+            console.log(updatedRows)
+            return updatedRows;
+        },
+        recover: function(id){
+            console.log('Recupero:' + id)
+            let rows = this.readFile();
 
+            let updatedRows = rows.map(oneRow => {
+                if (oneRow.id == id) {
+                    oneRow.status = 'live'
+                    return oneRow;
+                }
+
+                return oneRow;
+            });
             this.writeFile(updatedRows);
+            return id;
         }
     }
 }
