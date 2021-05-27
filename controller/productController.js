@@ -54,7 +54,7 @@ let productController = {
     },
     recover: (req, res) => {
         productModel.recover(req.params.id);
-        res.redirect('/productos/listar')
+        res.redirect('/productos/listarborrado')
     }
     
 }
