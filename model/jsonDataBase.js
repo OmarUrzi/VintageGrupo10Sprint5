@@ -42,6 +42,7 @@ const model = function (name){
 
             let updatedRows = rows.map(oneRow => {
                 if (oneRow.id == row.id) {
+                    row.status = oneRow.status;
                     return row;
                 }
 
