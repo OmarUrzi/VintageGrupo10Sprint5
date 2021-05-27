@@ -42,7 +42,11 @@ let productController = {
         }
         delete product.oldImage;
         productModel.update(product);
+        if(product.status == 'live'){
         res.redirect('/productos/listar')
+            }else{
+                res.redirect('/productos/listarborrado')
+            }
     },
     destroy: (req, res) => {
         productModel.delete(req.params.id); 
