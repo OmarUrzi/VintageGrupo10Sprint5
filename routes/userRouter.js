@@ -24,15 +24,7 @@ const validations = [
     body('nombre').notEmpty().withMessage('El campo no puede estar vacio'),
     body('email').isEmail().withMessage('Ingrese un email valido'),
     body('clave').isLength({min: 8}).withMessage('Ingrese al menos 8 caracteres'),
-    body('imagenAvatar').custom((value, {req}) => {
-        let file = req.file
-        if ( !file) {
-           next();
-         }
-   
-        return true
-   
-       })
+        
 ]
 
 

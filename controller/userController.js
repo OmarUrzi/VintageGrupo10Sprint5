@@ -35,7 +35,7 @@ const userController = {
             imageUsuario: imagenAvatar
         }
         user.create(userACrear);
-        res.redirect('./users/inicio-sesion')
+        res.redirect('/users/inicio-sesion')
     },
     login: (req, res) => {
         res.render('inicio-sesion')
