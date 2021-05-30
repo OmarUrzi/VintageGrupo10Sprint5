@@ -12,6 +12,12 @@
   "email": "omar@gmail.com",
   "clave": "$2a$10$jkdtN9nvGa2frQhGfOIrn.wWvwrYj3bzRHZZy7Uv4rXCrAuqU8.qG",
   "imageUsuario": "index.png"
+ },
+ {
+  "id": 4,
+  "nombre": "lehuel",
+  "email": "lehuisp@gmail.com",
+  "clave": "$2a$10$cFDKOa0XgNQ4kJD1S/eMguKJn7f2kiVZbzS1lafQH1Kf6elzsW8IG",
+  "imageUsuario": "index.png"
  }
- 
 ]

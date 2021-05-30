@@ -1,7 +1,9 @@
-const { validationResult } = require('express-validator');
+const { validationResult, cookie } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 
 const user = require('../model/users');
+const { destroy } = require('./productController');
+const cookieParser = require('cookie-parser');
 
 const userController = {
     register: (req, res) => {
@@ -48,6 +50,12 @@ const userController = {
                 delete userLogiado.clave;
                 req.session.userLogged = userLogiado;
                 res.redirect('/users/profile')
+                if (req.body.recordame) {
+                    console.log('pase por la cookie')
+                    console.log(req.body.email);
+
+                    res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
+                }
             }
             return res.render('inicio-sesion', {
                 errors: {
@@ -66,12 +74,14 @@ const userController = {
         });
     },
     profile: (req, res) => {
+        console.log(req.cookies)
         return res.render('profile', {
             user: req.session.userLogged
         });
     },
     logout: (req, res) => {
         req.session.destroy();
+        res.clearCookie('userEmail')
         res.redirect('/users/inicio-sesion')
     }
 }

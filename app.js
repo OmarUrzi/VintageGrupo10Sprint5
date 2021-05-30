@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
 const path = require('path');
-const port = 3000
 const puerto = process.env.PORT
 const logMiddleware = require('./middlewares/logMiddleware')
 const methodOverride = require('method-override');
 const session = require('express-session');
-
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+const cookies = require('cookie-parser')
 
 const homeRouter = require('./routes/homeRouter');
 const productRouter = require('./routes/productRouter');
@@ -23,10 +23,11 @@ app.use(logMiddleware);
 
 app.use(session({
     secret: "shuuuuu",
-    resave : false,
+    resave: false,
     saveUninitialized: false,
 }));
-
+app.use(cookies())
+app.use(userLoggedMiddleware)
 
 app.listen(puerto || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
