@@ -29,7 +29,6 @@ const model = function (name){
             return rows.find(product => product.id == id);
         },
         create:function(row) {
-            console.log(row)
             let rows = this.readFile();
             row.id = this.nextId();
             row.status = 'live';
@@ -73,7 +72,6 @@ const model = function (name){
             let updatedRows = rows.filter(row => {
                 return row.status == filtro;
             })
-            console.log(updatedRows)
             return updatedRows;
         },
         recover: function(id){

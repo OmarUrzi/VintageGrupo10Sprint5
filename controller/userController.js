@@ -49,22 +49,24 @@ const userController = {
             if (clave) {
                 delete userLogiado.clave;
                 req.session.userLogged = userLogiado;
-                res.redirect('/users/profile')
+
                 if (req.body.recordame) {
                     console.log('pase por la cookie')
                     console.log(req.body.email);
-
                     res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
                 }
-            }
-            return res.render('inicio-sesion', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son incorrectas'
+                res.redirect('/users/profile')
+            } else {
+                return res.render('inicio-sesion', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son incorrectas'
+                        }
                     }
-                }
-            });
-        }
+
+                });
+            }
+        }else{
         return res.render('inicio-sesion', {
             errors: {
                 email: {
@@ -72,6 +74,7 @@ const userController = {
                 }
             }
         });
+    }
     },
     profile: (req, res) => {
         console.log(req.cookies)

@@ -30,15 +30,13 @@ const validations = [
 ]
 
 
-
-
 router.get('/registro', loggedMiddleware, userController.register);
 
 router.post('/registro', upload.single('imagenAvatar'), validations, userController.registerPro);
 
-router.get('/inicio-sesion', loggedMiddleware, userController.login);
+router.get('/inicio-sesion',loggedMiddleware, userController.login);
 
-router.post('/inicio-sesion', userController.loginPro);
+router.post('/inicio-sesion',userController.loginPro);
 
 router.get('/profile', guestMiddleware, userController.profile);
 

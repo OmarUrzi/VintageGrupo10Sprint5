@@ -9,7 +9,6 @@ let productController = {
         res.render('listadoProductos', {productos})
     },
     listarDelete: (req, res) =>{
-        console.log(productModel);
         let productos = productModel.filter('deleted');
         res.render('listadoProductosDeleted', {productos})
     },
@@ -21,7 +20,6 @@ let productController = {
     },
     detail: (req, res) => {
         let product = productModel.find(req.params.id)
-        console.log(product)
         res.render('detail-product', { product })
     },
     create: (req, res) => {

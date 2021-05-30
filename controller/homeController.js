@@ -5,7 +5,6 @@ let homeController = {
 
     leerTodos: (req, res) =>{
         let product = productModel.all();
-        console.log(product)
         res.render('index', {product})
     },
 
